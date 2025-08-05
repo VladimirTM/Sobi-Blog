@@ -72,4 +72,4 @@ This repository showcases my third capstone project from the Web Development Boo
 ## Live Demo
 
 Check out the live version of my blog application here:
-**[LIVE DEMO LINK]**
+**[LIVE DEMO LINK](https://sobis-blog.onrender.com/)**
