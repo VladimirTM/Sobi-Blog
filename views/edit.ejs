@@ -1,0 +1,59 @@
+<%- include('./partials/header', { title: 'Edit Post - Sobi\'s Blog', page: 'edit' }) %>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            
+            <!-- Header -->
+            <div class="text-center mb-4">
+                <h1 class="display-5 mb-3">Edit Post</h1>
+                <p class="lead">Make changes to your blog post</p>
+            </div>
+
+            <!-- Form Card -->
+            <div class="card">
+                <div class="card-body">
+                    <form action="/edit-post/<%= post.id %>" method="post">
+                        
+                        <!-- Title Field -->
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Post Title</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="title"
+                                   name="title"
+                                   value="<%= post.title %>"
+                                   required
+                                   placeholder="Enter your post title" />
+                        </div>
+
+                        <!-- Content Field -->
+                        <div class="mb-4">
+                            <label for="content" class="form-label">Post Content</label>
+                            <textarea class="form-control"
+                                      id="content"
+                                      name="content"
+                                      rows="8"
+                                      required
+                                      placeholder="Write your post content here..."><%= post.content %></textarea>
+                        </div>
+
+                        <!-- Form Actions -->
+                        <div class="d-flex gap-2 justify-content-between">
+                            <a href="/" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left me-1"></i>Cancel
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save me-1"></i>Update Post
+                            </button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<%- include('./partials/footer') %>
